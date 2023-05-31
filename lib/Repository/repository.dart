@@ -1,8 +1,10 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:example_bloc/models/article.dart';
 
 class Repository {
-  final String endpoint =
+   String endpoint =
       "https://techblog.sasansafari.com/Techblog/api/article/get.php?command=new";
 
   Future<List<Article>> getArticles() async {
@@ -15,6 +17,7 @@ class Repository {
         }
       }
     });
+    log(articles.length.toString());
     return articles;
   }
 }

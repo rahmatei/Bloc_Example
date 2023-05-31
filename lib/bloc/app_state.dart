@@ -7,7 +7,6 @@ abstract class ArticleState extends Equatable {
 
 class ArticleLoadingState extends ArticleState {
   @override
-  // TODO: implement props
   List<Object?> get props => [];
 }
 
@@ -17,7 +16,6 @@ class ArticleLoadedState extends ArticleState {
   const ArticleLoadedState(this.articles);
 
   @override
-  // TODO: implement props
   List<Object?> get props => [articles];
 }
 
@@ -26,6 +24,5 @@ class ArticleErrorState extends ArticleState {
   const ArticleErrorState(this.errorMessage);
 
   @override
-  // TODO: implement props
   List<Object?> get props => [errorMessage];
 }
